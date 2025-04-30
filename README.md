@@ -58,9 +58,8 @@ pip install -r requirements.txt
 3. Run the App
 streamlit run enhanced_dashboard.py
 
-📁 Folder Structure
+📁 Folder Structure.
 
-.
 ├── enhanced_dashboard.py              # Main dashboard app
 
 ├── reddit_data_with_sentiment.json   # Sentiment-annotated Reddit data
