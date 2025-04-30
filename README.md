@@ -61,8 +61,11 @@ streamlit run enhanced_dashboard.py
 📁 Folder Structure
 .
 ├── enhanced_dashboard.py              # Main dashboard app
+
 ├── reddit_data_with_sentiment.json   # Sentiment-annotated Reddit data
+
 ├── requirements.txt                  # Python dependencies
+
 └── README.md                         # You're here!
 
 🧪 Sample Data Format
