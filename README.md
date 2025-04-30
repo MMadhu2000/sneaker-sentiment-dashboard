@@ -59,6 +59,7 @@ pip install -r requirements.txt
 streamlit run enhanced_dashboard.py
 
 📁 Folder Structure
+
 .
 ├── enhanced_dashboard.py              # Main dashboard app
 
