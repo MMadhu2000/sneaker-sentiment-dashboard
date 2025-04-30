@@ -28,6 +28,14 @@ See every Reddit post and its analyzed sentiment in a sleek table.
 ---
 
 ## 🖼️ Preview
+![image](https://github.com/user-attachments/assets/25283fc9-a91d-43cf-9bd0-2702a5d48150)
+![image](https://github.com/user-attachments/assets/a174ed3d-db3e-42df-926b-a4b6ea55a7ce)
+![image](https://github.com/user-attachments/assets/cc852b2a-46b9-4006-9793-0756b0edc9ae)
+![image](https://github.com/user-attachments/assets/b49f4966-789a-47fb-922b-10c1e983f7fb)
+![image](https://github.com/user-attachments/assets/04f8186a-ca9e-4259-80a6-94fb8d04a2d1)
+![image](https://github.com/user-attachments/assets/f8080a09-ba9e-4009-a6a6-f9f985b558e4)
+![image](https://github.com/user-attachments/assets/c11c2473-f261-419a-8ea1-de668f32f20f)
+![image](https://github.com/user-attachments/assets/afa79d2d-c152-439f-b1af-21b4dc4d73a9)
 
 
 ---
