@@ -1,12 +1,14 @@
-import streamlit as st
+import streamlit as st 
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-from wordcloud import WordCloud
+from wordcloud import WordCloud, STOPWORDS
 import nltk
 import json
 from nltk.corpus import stopwords
+import numpy as np
+import re
 
 nltk.download('stopwords')
 
@@ -61,10 +63,35 @@ st.plotly_chart(bar_fig, use_container_width=True)
 
 # Word cloud
 st.subheader("☁️ Word Cloud")
-text = " ".join(filtered['text'].tolist())
-wordcloud = WordCloud(stopwords=set(stopwords.words("english")), background_color="white").generate(text)
+
+# Cleaning text
+def clean_text(text):
+    text = re.sub(r"http\S+|www\S+|https\S+", "", text)
+    text = re.sub(r"\b(?:com|html|aspx|itemid|twitter|fangraphs|weidian|players|search|q|tweets|en|last|name|item|iso|obp|ab|ba|bb|hr|k)\b", "", text, flags=re.IGNORECASE)
+    return text
+
+text = " ".join([clean_text(t) for t in filtered['text']])
+
+# Custom stopwords
+custom_stopwords = set(STOPWORDS)
+custom_stopwords.update([
+    "https", "http", "www", "com", "reddit", "amp", "imgur", "jpg", "png", "gl", "rl",
+    "x", "air", "jordan", "retro", "search", "item", "aspx", "players", "twitter",
+    "fangraphs", "weidian", "html", "q", "tweets", "en", "last", "name", "itemid",
+    "obp", "ab", "ba", "bb", "hr", "k", "iso"
+])
+
+# Generate standard word cloud
+wc = WordCloud(
+    width=800,
+    height=400,
+    stopwords=custom_stopwords,
+    background_color='white'
+).generate(text)
+
+# Display the word cloud
 fig, ax = plt.subplots()
-ax.imshow(wordcloud, interpolation='bilinear')
+ax.imshow(wc, interpolation='bilinear')
 ax.axis("off")
 st.pyplot(fig)
 
